@@ -1,6 +1,12 @@
 import Head from "next/head";
 
+import { useWallet } from "@solana/wallet-adapter-react";
+
+import { WalletMultiButton } from "@solana/wallet-adapter-react-ui";
+
 const Home = () => {
+  const { publicKey, signMessage } = useWallet();
+
   return (
     <>
       <Head>
@@ -12,7 +18,7 @@ const Home = () => {
       <section className="hero max-h-screen h-screen bg-base-200">
         <div className="hero-content text-center">
           <div className="max-w-md">
-            <button className="btn btn-primary btn-md">Connect Wallet</button>
+            <WalletMultiButton />
           </div>
         </div>
       </section>
