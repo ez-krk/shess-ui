@@ -1,7 +1,7 @@
 import type { AppProps } from "next/app";
 
 import { ContextProvider } from "../contexts/ContextProvider";
-import Navbar from "../components/navbar/navbar.component";
+import Navbar from "../components/Navbar";
 
 require("@solana/wallet-adapter-react-ui/styles.css");
 require("../styles/globals.css");
